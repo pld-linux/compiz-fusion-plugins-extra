@@ -7,6 +7,10 @@ License:	GPL
 Group:		X11
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	866a4e5decb8b40df6bd0161dbd24a53
+Source1:	compizcap.png
+Source2:	fusioncap.png
+Source3:	splash_background.png
+Source4:	splash_logo.png
 URL:		http://forum.compiz-fusion.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
@@ -101,6 +105,11 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/compiz/*.la
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/compiz
+install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/compiz
+install %{SOURCE3} $RPM_BUILD_ROOT%{_datadir}/compiz
+install %{SOURCE4} $RPM_BUILD_ROOT%{_datadir}/compiz
 
 %find_lang %{name}
 
