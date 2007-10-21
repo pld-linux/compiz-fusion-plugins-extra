@@ -1,12 +1,12 @@
 Summary:	Extra Compiz Fusion plugins
 Summary(pl.UTF-8):	Dodatkowe wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-extra
-Version:	0.5.2
-Release:	3
+Version:	0.6.0
+Release:	1
 License:	GPL v2+
 Group:		X11
-Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	866a4e5decb8b40df6bd0161dbd24a53
+Source0:	http://releases.compiz-fusion.org/incoming/%{name}-%{version}.tar.bz2
+# Source0-md5:	eb5a4ed9c54aa9e0fdf47b24d94b2262
 Source1:	compizcap.png
 Source2:	fusioncap.png
 Source3:	splash_background.png
@@ -110,9 +110,6 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE3} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE4} $RPM_BUILD_ROOT%{_datadir}/compiz
-
-mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{pl_PL,pl}
-mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{pt_PT,pt}
 
 %find_lang %{name}
 
