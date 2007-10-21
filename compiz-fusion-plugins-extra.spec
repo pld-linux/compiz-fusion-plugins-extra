@@ -5,7 +5,7 @@ Version:	0.6.0
 Release:	1
 License:	GPL v2+
 Group:		X11
-Source0:	http://releases.compiz-fusion.org/incoming/%{name}-%{version}.tar.bz2
+Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	eb5a4ed9c54aa9e0fdf47b24d94b2262
 Source1:	compizcap.png
 Source2:	fusioncap.png
