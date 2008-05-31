@@ -1,12 +1,12 @@
 Summary:	Extra Compiz Fusion plugins
 Summary(pl.UTF-8):	Dodatkowe wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-extra
-Version:	0.7.4
+Version:	0.7.6
 Release:	1
 License:	GPL v2+
 Group:		X11
 Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	a2bd46dbc8e6cda5d8964bc03ad24ca3
+# Source0-md5:	5ade7211cc00e80727a007526d34e56d
 Source1:	compizcap.png
 Source2:	fusioncap.png
 Source3:	splash_background.png
