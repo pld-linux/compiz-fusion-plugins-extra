@@ -1,12 +1,12 @@
 Summary:	Extra Compiz Fusion plugins
 Summary(pl.UTF-8):	Dodatkowe wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-extra
-Version:	0.7.8
+Version:	0.8.2
 Release:	1
 License:	GPL v2+
 Group:		X11
-Source0:	http://releases.compiz-fusion.org/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	02e53740cab9a7e72d0cfc86e2505544
+Source0:	http://releases.compiz-fusion.org/incoming/compiz-plugins-extra-%{version}.tar.bz2
+# Source0-md5:	5ac96f1a0e32ccf4dd378454089fa347
 Source1:	compizcap.png
 Source2:	fusioncap.png
 Source3:	splash_background.png
@@ -84,7 +84,7 @@ Trailfocus: Powili przyciemnia nieaktywne okna.
 Widget: Tworzy warstwę z widgetami, podobną do Dashboarda w OS X.
 
 %prep
-%setup -q
+%setup -q -n compiz-plugins-extra-%{version}
 
 %build
 %{__glib_gettextize}
@@ -111,7 +111,7 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE3} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE4} $RPM_BUILD_ROOT%{_datadir}/compiz
 
-%find_lang %{name}
+%find_lang %{name} --all-name
 
 %clean
 rm -rf $RPM_BUILD_ROOT
