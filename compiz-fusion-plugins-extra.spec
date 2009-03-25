@@ -19,8 +19,10 @@ BuildRequires:	cairo-devel >= 1.0
 BuildRequires:	compiz-bcop >= %{version}
 BuildRequires:	compiz-devel >= %{version}
 BuildRequires:	compiz-fusion-plugins-main-devel >= %{version}
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	intltool >= 0.35.0
+BuildRequires:	libnotify-devel
 BuildRequires:	libtool
 BuildRequires:	pango-devel >= 1:1.10.0
 BuildRequires:	pkgconfig
@@ -83,6 +85,17 @@ Splash: Wyświetla prosty animowany ekran powitalny.
 Trailfocus: Powili przyciemnia nieaktywne okna.
 Widget: Tworzy warstwę z widgetami, podobną do Dashboarda w OS X.
 
+%package devel
+Summary:	Header file for animation addon plugin
+Summary(pl.UTF-8):	Plik nagłówkowy wtyczki animation addon
+Group:		X11/Development/Libraries
+
+%description devel
+Header file for animation addon plugin.
+
+%description devel -l pl.UTF-8
+Plik nagłówkowy wtyczki animation addon.
+
 %prep
 %setup -q -n compiz-plugins-extra-%{version}
 
@@ -122,3 +135,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/compiz/*.so
 %{_datadir}/compiz/*.xml
 %{_datadir}/compiz/*.png
+
+%files devel
+%defattr(644,root,root,755)
+%{_includedir}/compiz/*.h
+%{_pkgconfigdir}/compiz-animationaddon.pc
