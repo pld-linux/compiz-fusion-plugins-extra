@@ -124,12 +124,12 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE3} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE4} $RPM_BUILD_ROOT%{_datadir}/compiz
 
-%find_lang %{name} --all-name
+%find_lang compiz-plugins-extra
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files -f compiz-plugins-extra.lang
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_libdir}/compiz/*.so
@@ -138,5 +138,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/compiz/*.h
+%{_includedir}/compiz/compiz-animationaddon.h
 %{_pkgconfigdir}/compiz-animationaddon.pc
