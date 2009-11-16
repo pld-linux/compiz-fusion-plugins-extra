@@ -13,7 +13,9 @@ Source2:	fusioncap.png
 Source3:	splash_background.png
 Source4:	splash_logo.png
 URL:		http://www.compiz.org/
+BuildRequires:	GConf2-devel
 BuildRequires:	OpenGL-devel
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	cairo-devel >= 1.0
