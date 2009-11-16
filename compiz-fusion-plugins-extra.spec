@@ -1,17 +1,18 @@
+%define	pkgname	compiz-plugins-extra
 Summary:	Extra Compiz Fusion plugins
 Summary(pl.UTF-8):	Dodatkowe wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-extra
-Version:	0.8.2
+Version:	0.8.4
 Release:	1
 License:	GPL v2+
 Group:		X11
-Source0:	http://releases.compiz-fusion.org/incoming/compiz-plugins-extra-%{version}.tar.bz2
-# Source0-md5:	5ac96f1a0e32ccf4dd378454089fa347
+Source0:	http://releases.compiz.org/%{version}/%{pkgname}-%{version}.tar.bz2
+# Source0-md5:	b40c3058c30a58bdc46631d5a47323d8
 Source1:	compizcap.png
 Source2:	fusioncap.png
 Source3:	splash_background.png
 Source4:	splash_logo.png
-URL:		http://forum.compiz-fusion.org/
+URL:		http://www.compiz.org/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
@@ -97,7 +98,7 @@ Header file for animation addon plugin.
 Plik nagłówkowy wtyczki animation addon.
 
 %prep
-%setup -q -n compiz-plugins-extra-%{version}
+%setup -q -n %{pkgname}-%{version}
 
 %build
 %{__glib_gettextize}
@@ -124,12 +125,12 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE3} $RPM_BUILD_ROOT%{_datadir}/compiz
 install %{SOURCE4} $RPM_BUILD_ROOT%{_datadir}/compiz
 
-%find_lang compiz-plugins-extra
+%find_lang %{pkgname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f compiz-plugins-extra.lang
+%files -f %{pkgname}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS
 %attr(755,root,root) %{_libdir}/compiz/*.so
