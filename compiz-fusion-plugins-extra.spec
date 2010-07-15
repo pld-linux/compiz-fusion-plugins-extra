@@ -2,12 +2,12 @@
 Summary:	Extra Compiz Fusion plugins
 Summary(pl.UTF-8):	Dodatkowe wtyczki Compiz Fusion
 Name:		compiz-fusion-plugins-extra
-Version:	0.8.4
-Release:	2
+Version:	0.8.6
+Release:	1
 License:	GPL v2+
 Group:		X11
 Source0:	http://releases.compiz.org/%{version}/%{pkgname}-%{version}.tar.bz2
-# Source0-md5:	b40c3058c30a58bdc46631d5a47323d8
+# Source0-md5:	fdeec3e437e70d7f68900c031f3165d5
 Source1:	compizcap.png
 Source2:	fusioncap.png
 Source3:	splash_background.png
@@ -19,7 +19,9 @@ BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	cairo-devel >= 1.0
-BuildRequires:	compiz-bcop >= %{version}
+# No current version, take last one:
+#BuildRequires:	compiz-bcop >= %{version}
+BuildRequires:	compiz-bcop >= 0.8.4
 BuildRequires:	compiz-devel >= %{version}
 BuildRequires:	compiz-fusion-plugins-main-devel >= %{version}
 BuildRequires:	gettext-devel
