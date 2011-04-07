@@ -1,0 +1,15 @@
+--- compiz-plugins-extra-0.8.6/src/notification/notification.c~	2010-03-29 16:09:18.000000000 +0200
++++ compiz-plugins-extra-0.8.6/src/notification/notification.c	2011-04-07 10:38:05.312531742 +0200
+@@ -103,7 +103,11 @@
+ 
+     n = notify_notification_new (logLevel,
+                                  message,
+-                                 iconUri, NULL);
++                                 iconUri
++#if !defined(NOTIFY_VERSION_MINOR) || (NOTIFY_VERSION_MAJOR == 0 && NOTIFY_VERSION_MINOR < 7)
++				 , NULL
++#endif
++				 );
+ 
+     notify_notification_set_timeout (n, nd->timeout);
+ 

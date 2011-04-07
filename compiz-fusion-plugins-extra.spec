@@ -12,6 +12,7 @@ Source1:	compizcap.png
 Source2:	fusioncap.png
 Source3:	splash_background.png
 Source4:	splash_logo.png
+Patch0:		%{name}-libnotify.patch
 URL:		http://www.compiz.org/
 BuildRequires:	GConf2-devel
 BuildRequires:	OpenGL-devel
@@ -103,6 +104,7 @@ Plik nagłówkowy wtyczki animation addon.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
+%patch0 -p1
 
 %build
 %{__glib_gettextize}
