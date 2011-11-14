@@ -9,9 +9,13 @@ Group:		X11
 Source0:	http://releases.compiz.org/%{version}/%{pkgname}-%{version}.tar.bz2
 # Source0-md5:	fdeec3e437e70d7f68900c031f3165d5
 Source1:	compizcap.png
+# Source1-md5:	9e846f6c3bc6c7e4d02c252306ada136
 Source2:	fusioncap.png
+# Source2-md5:	73ba92ba4b139f6d68cdf4669868ff85
 Source3:	splash_background.png
+# Source3-md5:	d315d5d5e994e61543372ff54c60db62
 Source4:	splash_logo.png
+# Source4-md5:	224c6427e261a4b5497586d110ec1e93
 Patch0:		%{name}-libnotify.patch
 URL:		http://www.compiz.org/
 BuildRequires:	GConf2-devel
