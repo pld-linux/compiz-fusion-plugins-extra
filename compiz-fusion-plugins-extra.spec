@@ -29,7 +29,7 @@ BuildRequires:	cairo-devel >= 1.0
 BuildRequires:	compiz-bcop >= 0.8.4
 BuildRequires:	compiz-devel >= %{version}
 BuildRequires:	compiz-fusion-plugins-main-devel >= %{version}
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libnotify-devel
